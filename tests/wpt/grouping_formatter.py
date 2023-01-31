@@ -172,7 +172,7 @@ class ServoHandler(mozlog.reader.LogHandler):
         # or other error messages.
         stack = data.get("stack", None)
         if test_status in ("CRASH", "TIMEOUT"):
-            stack = f"\n{stack}"if stack else ""
+            stack = f"\n{stack}" if stack else ""
             stack = f"{self.test_output[test_path]}{stack}"
 
         result = UnexpectedResult(
